@@ -1,8 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
+const { createClient } = require('@supabase/supabase-js');
 require('dotenv').config();
 
 const authRoutes = require('./routes/authRoutes');
@@ -11,6 +11,9 @@ const promptBenchRoutes = require('./routes/promptBenchRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Initialize Supabase client
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_API_KEY);
 
 // Security middleware
 app.use(helmet());
@@ -33,13 +36,11 @@ app.use(cors(corsOptions));
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('MongoDB connected'))
-.catch((err) => console.log('MongoDB connection error:', err));
+// Make supabase client available in request object
+app.use((req, res, next) => {
+  req.supabase = supabase;
+  next();
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
