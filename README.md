@@ -41,18 +41,34 @@ Savvy Prompting is a SaaS business dedicated to empowering companies with the to
 
 2. Install dependencies:
    ```
+   # Install Next.js frontend dependencies
+   npm install
+   
+   # Install Node.js backend dependencies
    cd server && npm install
-   cd ../client && npm install
+   cd ..
+   
+   # Install Python backend dependencies
+   cd promptengineering
+   pip install -r requirements.txt
+   cd ..
    ```
 
 3. Set up environment variables:
-   - Create a `.env` file in the `server` directory
+   - Create a `.env` file in the `savvy-prompting` directory
    - Add the following variables:
      ```
      MONGODB_URI=your_mongodb_connection_string
      JWT_SECRET=your_jwt_secret
-     FRONTEND_URL=http://localhost:8000
+     SUPABASE_URL=your_supabase_project_url
+     SUPABASE_API_KEY=your_supabase_api_key
      ```
+
+4. Set up Supabase:
+   - Create a Supabase account at https://supabase.com/
+   - Create a new project
+   - Get your project URL and API key from the project settings
+   - Add these to your `.env` file as SUPABASE_URL and SUPABASE_API_KEY
 
 ## Usage
 
@@ -61,7 +77,12 @@ Savvy Prompting is a SaaS business dedicated to empowering companies with the to
    ./start.sh
    ```
 
-2. Open your web browser and go to `http://localhost:8000`
+   This script will start three components:
+   - Next.js frontend (default port: 3000)
+   - Node.js backend (default port: 5000)
+   - Python backend (default port: 8000)
+
+2. Open your web browser and go to `http://localhost:3000`
 
 3. Register for an account or log in
 
@@ -86,7 +107,7 @@ To run the application using Docker:
    docker-compose up --build
    ```
 
-3. Open your web browser and go to `http://localhost:8000`
+3. Open your web browser and go to `http://localhost:3000`
 
 4. To stop the application, press Ctrl+C in the terminal and then run:
    ```
@@ -102,16 +123,12 @@ For detailed API documentation, please refer to the [API_DOCUMENTATION.md](./API
 To set up the development environment:
 
 1. Follow the [Installation](#installation) steps
-2. For the backend, run:
+2. Run the start script:
    ```
-   cd server && npm run dev
-   ```
-3. For the frontend, run:
-   ```
-   cd client && npm start
+   ./start.sh
    ```
 
-This will start the backend server with nodemon for auto-reloading and the frontend development server.
+This will start all components (Next.js frontend, Node.js backend, and Python backend) in development mode.
 
 ## Roadmap
 
@@ -122,6 +139,8 @@ Our development roadmap is divided into phases:
 - [x] Implement basic Prompt Analyzer
 - [x] Integrate PromptBench
 - [x] Set up user authentication
+- [x] Integrate Supabase
+- [x] Set up multi-component architecture (Next.js, Node.js, Python)
 - [ ] Enhance feedback system
 - [ ] Implement user dashboard
 
