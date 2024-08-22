@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savvy Prompting - Elevate Your AI Conversations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',
+                        secondary: '#50E3C2',
+                        accent: '#F5A623',
+                        background: '#F8F9FA',
+                        text: '#333333',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body text-text bg-background">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <img src="https://via.placeholder.com/150x50?text=Savvy+Prompting" alt="Savvy Prompting Logo" class="h-10">
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="text-text hover:text-primary transition-colors">Home</a></li>
+                <li><a href="#features" class="text-text hover:text-primary transition-colors">Features</a></li>
+                <li><a href="#prompt-analyzer" class="text-text hover:text-primary transition-colors">Prompt Analyzer</a></li>
+                <li><a href="#promptbench" class="text-text hover:text-primary transition-colors">PromptBench</a></li>
+                <li><a href="#about" class="text-text hover:text-primary transition-colors">About</a></li>
+                <li><a href="#contact" class="text-text hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="#blog" class="text-text hover:text-primary transition-colors">Blog</a></li>
+                <li><a href="#" id="login-link" class="text-primary hover:text-accent transition-colors">Login</a></li>
+                <li><a href="#" id="register-link" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-accent transition-colors">Register</a></li>
+            </ul>
+            <div class="md:hidden">
+                <button class="text-text focus:outline-none" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <li><a href="#home" class="block px-3 py-2 text-text hover:bg-primary hover:text-white rounded-md">Home</a></li>
+                <li><a href="#features" class="block px-3 py-2 text-text hover:bg-primary hover:text-white rounded-md">Features</a></li>
+                <li><a href="#prompt-analyzer" class="block px-3 py-2 text-text hover:bg-primary hover:text-white rounded-md">Prompt Analyzer</a></li>
+                <li><a href="#promptbench" class="block px-3 py-2 text-text hover:bg-primary hover:text-white rounded-md">PromptBench</a></li>
+                <li><a href="#about" class="block px-3 py-2 text-text hover:bg-primary hover:text-white rounded-md">About</a></li>
+                <li><a href="#contact" class="block px-3 py-2 text-text hover:bg-primary hover:text-white rounded-md">Contact</a></li>
+                <li><a href="#blog" class="block px-3 py-2 text-text hover:bg-primary hover:text-white rounded-md">Blog</a></li>
+                <li><a href="#" id="mobile-login-link" class="block px-3 py-2 text-primary hover:bg-primary hover:text-white rounded-md">Login</a></li>
+                <li><a href="#" id="mobile-register-link" class="block px-3 py-2 bg-primary text-white hover:bg-accent rounded-md">Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Elevate Your AI Conversations</h1>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Savvy Prompting empowers businesses to harness the full potential of AI through intelligent conversation design.</p>
+                <a href="#prompt-analyzer" class="bg-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors">Try Prompt Analyzer</a>
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="feature-item bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-heading text-xl font-semibold mb-4">Optimize AI Interactions</h3>
+                        <p>Get better results from your AI systems with our advanced prompting techniques.</p>
+                    </div>
+                    <div class="feature-item bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-heading text-xl font-semibold mb-4">Save Time and Resources</h3>
+                        <p>Streamline your workflow with efficient prompt engineering tools.</p>
+                    </div>
+                    <div class="feature-item bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-heading text-xl font-semibold mb-4">Stay Ahead of the Curve</h3>
+                        <p>Keep up with the latest advancements in AI communication.</p>
+                    </div>
+                    <div class="feature-item bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-heading text-xl font-semibold mb-4">Unlock New Possibilities</h3>
+                        <p>Discover innovative AI-driven business solutions with Savvy Prompting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prompt-analyzer" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">Prompt Analyzer</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="input-container">
+                            <label for="ai-model" class="block mb-2 font-semibold">Select AI Model:</label>
+                            <select id="ai-model" name="ai-model" class="w-full p-2 border border-gray-300 rounded-md mb-4">
+                                <option value="gpt-3.5">GPT-3.5</option>
+                                <option value="gpt-4">GPT-4</option>
+                                <option value="claude">Claude</option>
+                            </select>
+                            <label for="prompt-input" class="block mb-2 font-semibold">Enter your prompt:</label>
+                            <textarea id="prompt-input" name="prompt-input" rows="5" placeholder="Type your prompt here..." class="w-full p-2 border border-gray-300 rounded-md mb-4"></textarea>
+                            <button id="analyze-button" class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Analyze Prompt</button>
+                        </div>
+                        <div class="results-container">
+                            <h3 class="font-heading text-2xl font-semibold mb-4">Analysis Results</h3>
+                            <div id="token-count" class="mb-2"></div>
+                            <div id="estimated-time" class="mb-2"></div>
+                            <div id="clarity-score" class="mb-2"></div>
+                            <div id="suggestions" class="mb-2"></div>
+                            <div id="context-specific-recommendations"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promptbench" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">PromptBench Evaluation</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="input-container">
+                            <label for="promptbench-input" class="block mb-2 font-semibold">Enter prompts for evaluation (one per line):</label>
+                            <textarea id="promptbench-input" name="promptbench-input" rows="5" placeholder="Enter prompts here, one per line..." class="w-full p-2 border border-gray-300 rounded-md mb-4"></textarea>
+                            <button id="evaluate-button" class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Evaluate Prompts</button>
+                        </div>
+                        <div class="results-container">
+                            <h3 class="font-heading text-2xl font-semibold mb-4">Evaluation Results</h3>
+                            <div id="promptbench-results"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="user-dashboard" style="display: none;" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">User Dashboard</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div id="user-info" class="mb-8"></div>
+                    <h3 class="font-heading text-2xl font-semibold mb-4">Prompt History</h3>
+                    <ul id="prompt-history-list" class="mb-8"></ul>
+                    <h3 class="font-heading text-2xl font-semibold mb-4">Improvement Metrics</h3>
+                    <div id="improvement-metrics"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">Latest from Our Blog</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-heading text-xl font-semibold mb-4">The Art of Crafting Effective AI Prompts</h3>
+                        <p class="mb-4">Learn the key principles behind creating prompts that yield optimal results from AI models.</p>
+                        <a href="#" class="text-primary hover:text-accent transition-colors">Read More</a>
+                    </article>
+                    <article class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-heading text-xl font-semibold mb-4">AI Prompt Engineering: A Beginner's Guide</h3>
+                        <p class="mb-4">Discover the basics of prompt engineering and how it can revolutionize your AI interactions.</p>
+                        <a href="#" class="text-primary hover:text-accent transition-colors">Read More</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">About Us</h2>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="mb-4">Savvy Prompting is a cutting-edge SaaS platform dedicated to revolutionizing the way businesses interact with AI. Our team of experts combines deep knowledge of AI systems with a passion for clear communication to help you achieve outstanding results.</p>
+                    <p>Founded in 2023, we've quickly become a leader in the field of prompt engineering, serving clients across various industries who are looking to maximize their AI investments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">Contact Us</h2>
+                <form id="contact-form" class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                    <div class="mb-4">
+                        <label for="name" class="block mb-2 font-semibold">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-2 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2 font-semibold">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full p-2 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block mb-2 font-semibold">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required class="w-full p-2 border border-gray-300 rounded-md" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="footer-section">
+                    <h3 class="font-heading text-xl font-semibold mb-4">Savvy Prompting</h3>
+                    <p>Elevate Your AI Conversations</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="font-heading text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="#features" class="hover:text-accent transition-colors">Features</a></li>
+                        <li><a href="#prompt-analyzer" class="hover:text-accent transition-colors">Prompt Analyzer</a></li>
+                        <li><a href="#promptbench" class="hover:text-accent transition-colors">PromptBench</a></li>
+                        <li><a href="#about" class="hover:text-accent transition-colors">About</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition-colors">Contact</a></li>
+                        <li><a href="#blog" class="hover:text-accent transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="font-heading text-xl font-semibold mb-4">Connect With Us</h3>
+                    <ul class="social-links space-y-2">
+                        <li><a href="#" class="hover:text-accent transition-colors">Facebook</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Savvy Prompting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-heading text-2xl font-semibold">Login</h2>
+                <button class="text-gray-500 hover:text-gray-700" id="close-login-modal">&times;</button>
+            </div>
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="login-email" class="block mb-2 font-semibold">Email</label>
+                    <input type="email" id="login-email" placeholder="Email" required class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="login-password" class="block mb-2 font-semibold">Password</label>
+                    <input type="password" id="login-password" placeholder="Password" required class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <button type="submit" class="w-full bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-heading text-2xl font-semibold">Register</h2>
+                <button class="text-gray-500 hover:text-gray-700" id="close-register-modal">&times;</button>
+            </div>
+            <form id="register-form">
+                <div class="mb-4">
+                    <label for="register-username" class="block mb-2 font-semibold">Username</label>
+                    <input type="text" id="register-username" placeholder="Username" required class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="register-email" class="block mb-2 font-semibold">Email</label>
+                    <input type="email" id="register-email" placeholder="Email" required class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="register-password" class="block mb-2 font-semibold">Password</label>
+                    <input type="password" id="register-password" placeholder="Password" required class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <button type="submit" class="w-full bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

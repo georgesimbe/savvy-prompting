@@ -1,0 +1,22 @@
+name: savvy-prompting
+region: nyc
+services:
+  - name: web
+    github:
+      repo: georgesimbe/savvy-prompting
+      branch: main
+    build_command: docker-compose build
+    run_command: docker-compose up
+    envs:
+      - key: MONGODB_URI
+        value: ${MONGODB_URI}
+      - key: JWT_SECRET
+        value: ${JWT_SECRET}
+      - key: FRONTEND_URL
+        value: ${FRONTEND_URL}
+databases:
+  - engine: MONGODB
+    name: savvy-prompting-db
+    num_nodes: 1
+    size: db-s-1vcpu-1gb
+    version: "4.4"

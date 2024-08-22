@@ -1,0 +1,16 @@
+{
+  "name": "savvy-prompting",
+  "version": "1.0.0",
+  "description": "SavvyPrompts application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "heroku-postbuild": "cd server && npm install"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
